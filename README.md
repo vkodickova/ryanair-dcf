@@ -21,16 +21,8 @@ Built by Viktorie Kodickova.
 
 ## Checking the model
 
-- `Changes` sheet: the four changes, before and after, the step-by-step checkpoints and the known weak points.
+- `Changes` sheet: the four changes, before and after, and the step-by-step checkpoints.
 - `DCF` sheet: scenario switches in D11:D14, reinvestment in rows 60 to 65, scenario table in rows 87 to 89, sensitivity table in rows 93 to 99.
 - `Calc` sheet: the step-by-step valuations and the cash flow paths behind the scenario and sensitivity tables.
-
-## Known weak points
-
-- Tax at 10% against Pillar Two (15% would give about €31.5 per share).
-- FY26 FCF is not prorated for the stub period.
-- The "Total Debt 10,470" label in the Ratios sheet is actually total liabilities.
-- Leases are not added to debt separately.
-- The RONIC path (19.1% in FY26 fading to WACC in FY35) is an analyst assumption.
 
 For learning purposes only. Not investment advice.
