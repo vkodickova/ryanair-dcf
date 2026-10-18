@@ -1,37 +1,35 @@
-# Ryanair DCF valuation (v2)
+# Ryanair DCF valuation
 
 Ten-year unlevered DCF of Ryanair (FY26 to FY35). Valuation date 6 March 2026, share price €26.19.
-Built by Viktorie Kodickova and updated in October 2026 after interview feedback.
+Built by Viktorie Kodickova.
 
-**Base case result: €31.41 per share** (original model €30.97).
+**Base case result: €31.41 per share** (conservative €23.67, optimistic €40.04).
 
 ## Files
 
 | File | Content |
 |---|---|
-| `Ryanair_DCF_Valuation_Kodickova_2026_v2.xlsx` | The model. All cells are live formulas. |
-| `Ryanair_DCF_Update_Report_Kodickova_2026.pdf` | Two-page report on what changed, how and why. |
+| `Ryanair_DCF_Model_Kodickova_2026.xlsx` | The model. All cells are live formulas. |
+| `Ryanair_DCF_Report_Kodickova_2026.pdf` | Two-page report on the method and results. |
 
-## What changed in v2
+## Method
 
-1. **Blume adjusted beta.** Adjusted beta = 1/3 x 1 + 2/3 x raw beta feeds the cost of equity (WACC 8.60% to 8.58%).
-2. **Terminal FCF tied to growth.** Terminal FCF = NOPAT FY35 x (1+g) x (1 - g/WACC), so terminal reinvestment falls from about 47% to 17.5% of NOPAT.
-3. **Growth fades to the terminal rate.** From FY27 growth falls in equal steps so FY35 growth equals the terminal growth rate, in all three scenarios.
-
-Correcting the terminal year alone would give about €41 per share. The growth fade brings the value back to about €31.
+1. **Cost of equity** uses a Blume adjusted beta: 1/3 x 1 + 2/3 x raw beta (WACC 8.58%).
+2. **Revenue growth** starts at the scenario rate in FY26 and falls in equal steps to the terminal growth rate in FY35.
+3. **Terminal value** uses terminal FCF = NOPAT FY35 x (1+g) x (1 - g/WACC), so terminal reinvestment equals g/WACC of NOPAT (17.5%).
 
 ## Checking the model
 
-- `Changes` sheet: before and after table and the reconciliation of each step against my own replication (tolerance €0.30).
 - `DCF` sheet: scenario switches in D11:D14, scenario table in rows 87 to 89, sensitivity table in rows 93 to 99.
-- `Calc` sheet: the step-by-step valuations behind the reconciliation, the scenario table and the sensitivity table.
+- `Calc` sheet: the cash flow paths behind the scenario table and the sensitivity table.
+- `Notes` sheet: method summary and known weak points.
 
 ## Known weak points
 
-- Tax at 10% against Pillar Two (15% would give about €28 per share on the original model and about €29 on v2).
+- Tax at 10% against Pillar Two (15% would give about €29 per share).
 - FY26 FCF is not prorated for the stub period.
 - The "Total Debt 10,470" label in the Ratios sheet is actually total liabilities.
 - Leases are not added to debt separately.
-- CapEx, D&A and working capital stay fixed percentages of sales through the fade.
+- CapEx, D&A and working capital stay fixed percentages of sales through the growth fade.
 
 For learning purposes only. Not investment advice.
